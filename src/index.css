@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colores Personalizados */
+  --color-color-1: #AC6AFF;
+  --color-color-2: #FFC876;
+  --color-color-3: #FF776F;
+  --color-color-4: #7ADB78;
+  --color-color-5: #858DFF;
+  --color-color-6: #FF98E2;
+
+  --color-stroke-1: #26242C;
+
+  --color-n-1: #FFFFFF;
+  --color-n-2: #CAC6DD;
+  --color-n-3: #ADA8C3;
+  --color-n-4: #757185;
+  --color-n-5: #3F3A52;
+  --color-n-6: #252134;
+  --color-n-7: #15131D;
+  --color-n-8: #0E0C15;
+  --color-n-9: #474060;
+  --color-n-10: #43435C;
+  --color-n-11: #1B1B2E;
+  --color-n-12: #2E2A41;
+  --color-n-13: #6C7275;
+
+  /* Tipografías */
+  --font-sans: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
+  --font-code: var(--font-code);
+  --font-grotesk: var(--font-grotesk);
+
+  /* Espaciado y Otros */
+  --letter-spacing-tagline: .15em;
+  
+  --spacing-0_25: 0.0625rem;
+  --spacing-7_5: 1.875rem;
+  --spacing-15: 3.75rem;
+
+  --opacity-15: .15;
+  
+  --transition-duration-default: 200ms;
+  --transition-timing-function-default: linear;
+
+  --z-index-1: 1;
+  --z-index-2: 2;
+  --z-index-3: 3;
+  --z-index-4: 4;
+  --z-index-5: 5;
+
+  --border-width-default: 0.0625rem;
+
+  --background-image-radial-gradient: radial-gradient(var(--tw-gradient-stops));
+  --background-image-conic-gradient: conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876);
+}
+
+/* --- Componentes (Sustituye a addComponents) --- */
+@utility container {
+  max-width: 77.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  @media (min-width: 768px) { padding-left: 2.5rem; padding-right: 2.5rem; }
+  @media (min-width: 1024px) { padding-left: 3.75rem; padding-right: 3.75rem; }
+  @media (min-width: 1280px) { max-width: 87.5rem; }
+}
+
+@utility h1 {
+  @apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem];
+}
+
+@utility h2 {
+  @apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight;
+}
+
+/* Repite el mismo patrón para h3, h4, body-1, etc. usando @utility */
+
+@utility tap-highlight-color {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
